@@ -1,0 +1,257 @@
+body {
+    margin: 0;
+    background: #533d36;
+
+    font-family: "Spartan Light", "Spartan SemiBold", "Spartan Medium";
+    font-size:30px ;
+    line-height: 1.6;
+    color: azure;
+}
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+h1,h2,h3,h4,h5,h6{margin:0;}
+
+
+#rectangle {
+    margin: 10px 20px 10px 20px;
+    max-width: 97%;
+    height: 100%;
+    background: rgba(16, 12, 12, 0.6);
+}
+#rectangle2 {
+    width: 500px;
+    background: rgba(24, 20, 20, 0.83);
+    margin: 0 auto;
+}
+
+#rectangle3{
+    max-width: 425px;
+    height: 607px;
+    background: rgba(83, 58, 58, 0.19);
+}
+
+#rectangle4{
+    width: 425px;
+    height: 607px;
+    margin: 10px;
+}
+#rectangle4 img {
+    margin-top: 15px;
+}
+.rectangle5 {
+    margin: 10px;
+}
+.photo_rectangle5 {
+    margin-top: 15px;
+}
+.rectangle_class_3 {
+    margin-top: 15px;
+}
+.one {
+    margin: 10px;
+}
+
+.intro{
+    display: flex;
+    justify-content: space-around; /*відцентровує блоки з рівними відступами між ними*/
+    flex-wrap: wrap; /*перенесення на наступний рядок ТІЛЬКИ коли використовується значення "display: flex;"*/
+    width:100%;
+    height:100%;
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.line3{
+    max-width: 425px;
+    border: 1px solid #FFFFFF;
+}
+.line1{
+    margin-bottom: 15px;
+    max-width: 425px;
+    border: 1px solid #FFFFFF;
+}
+.line2{
+    max-width: 350px;
+    border: 1px solid #FFFFFF;
+}
+.lines {
+    display: flex; /*ставить елементи в один ряд і дозволяє працювати функціям які написані нижче*/
+    flex-direction: row; /*просто ставить div в один рядочок*/
+    flex-wrap: wrap; /*при зменшенні екрану лінії (або блоки чи які-небуть елементи яким ти даєш таке свойство) будуть не злипатись зліва сторінки (або зжиматись як сільодки в банці) а ставати одна під одною*/
+    justify-content: space-around; /*розставляє елементи з відними відступами від боків і рівними відступами між самими елементами*/
+}
+
+.header {
+    background: url(../img/a.jpg);
+    max-width: 100%;
+    height: 240px;
+    object-fit: cover;
+    align-items: center; /*вертикально по центру*/
+    display: flex;
+}
+
+.header img {
+    object-fit: cover; /*Властивість визначає, як вміст замінного елемента, такого як   або  , повинно заповнювати контейнер щодо його висоти і ширини
+                         контент змінює свій розмір таким чином, щоб зберігати свої пропорції при заповненні блоку*/
+}
+@media (max-width: 755px) { /*media використовується для адаптування
+ сайтів під всі види ерканів ставишш максимальне значення і все що нижче цього максимального значення (розширення екрану)
+  буде виконуватись при такому розширенні екрану, можна ще поставити (min-width: ***px) то буде оначати шо від цього розширення екрану і до бескунечності 
+  буде виконуватись то шо пропишеш, а можна задати зразу 2 значенння для того шоб певна дія виконувалась з максимального значення до мінімального
+  і виглядає запис отак: @media (min-width: 100px) and (max-width: 755px) */
+    .header_0 {
+        display: none; /*ховаємо хедер з меню*/
+    }
+    .mobile_menu {
+        display: block; /*відображаєм мобільне меню*/
+    }
+    .content {
+        max-width: 89%;
+        float: right;
+    }
+}
+@media (min-width: 755px) {
+    .header_0 {
+        display: block; /*відображаєм хедер з меню*/
+    }
+    .mobile_menu {
+        display: none; /*ховаєм мобільне меню*/
+    }
+}
+@media (max-width: 560px) {
+    #rectangle4 img {
+        width: 70vw;
+        height: auto;
+    }
+    .photo_rectangle5 center img {
+        max-width: 59vw;
+        height: auto;
+    }
+    .line3 {
+        margin: 0 auto !important;
+        max-width: 425px;
+    }
+    .under_rectangle4 {
+        display: flex;
+        justify-content: center;
+    }
+     .menu-list {
+        font-size: 25px;
+}
+@media (max-width: 535px) {
+    .rectangle_class_3 p {
+        font-size: 22px !important;
+        margin: 10px 10px 0px;
+
+    }
+    #rectangle {
+        margin: 10px; 
+    }
+}
+@media (max-width: 490px) {
+    .rectangle_class_3 p {
+        font-size: 4.5vw !important;
+        line-height: 43px !important;
+    }
+    .content {
+        max-width: 88%;
+    }
+    .button_menu_mobile img {
+        width: 30px !important;
+    }
+    .bg_button {
+        width: 50px !important;
+        right: -49px !important;
+    }
+    .bg_button a {
+        width: 30px !important;
+        height: 30px !important;
+        right: 10px !important;
+    }
+    .menu-list {
+        font-size: 20px;
+    }
+}
+@media (max-width: 380px) { 
+    .content {
+        max-width: 85%;
+    }
+    .menu-list {
+        font-size: 15px;
+    }
+}
+.mobile_menu {
+    position: relative; /*положення елементу встановлюється відносно його початкового місця */
+    overflow-x: hidden; /*Властивість overflow-x управляє відображенням змісту блокового елемента по горизонталі,
+                         якщо контент цілком не поміщається і виходить за область праворуч або ліворуч від блоку
+                         В данному випадку відображається лише область всередині елемента, інше буде приховано*/
+}
+.burger {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 50%;
+    height: 100vh;
+    background-color: #2d2b2c;
+    transition: 1s;
+    transform: translateX(-100%); /**/
+}
+.burger_open {
+    transform: translateX(0%);
+}
+.button_menu_mobile img {
+    width: 40px;
+}
+.menu-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+}
+.menu-list li {
+    padding: 10px;
+    list-style-type: none; /*забирає крапочки біля елементів "li"*/
+}
+.menu-list a {
+    text-decoration: none; /*Прибирає підчеркування елементів "а"*/
+    color: #f8dacd;
+    font-weight: bold; /*робить текст жирним*/
+    font-family: Spartan Medium ;
+}
+.bg_button {
+    background: url(../img/menu.jpg);
+    background-repeat: no-repeat; /*картинка не повторюється коли ти її вставляєш*/
+    background-position: center bottom; /*позиціонує картинку відносно блоку в якому вона знаходиться в даному випадку відображено той участок картинки який знаходиться знизу в центрі "center bottom"*/
+    background-size: cover; /*підганяє розмір картинки під висоту і ширину блока в якому вона буде лежати*/
+    height: 100vh;
+    width: 65px;
+    position: absolute;
+    right: -64px;
+}
+.bg_button a {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: 15px;
+    top: 25px;
+}
+.bg_button p {
+    transform: rotate(270deg); /*текст повернутий на 270 градусів*/
+    display: flex;
+    height: 100vh;
+    font-size: 35px;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 0px 0px 8px rgb(0 0 0); /*тінь тексту*/
+}
+.rectangle_class_3 p {
+    padding: 10px;
+    font-size: 23px;
+    line-height: 55px;
+}

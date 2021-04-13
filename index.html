@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <title>LoveCoffeeBar</title>
+    <style>
+        p{
+            font-family: "Spartan Light";
+            text-align: center;
+            margin: 10px 15px 0px;
+        }
+        .menu {            
+            display: flex;
+            align-items: center; 
+            justify-content: space-around; 
+            height: 85px;
+        }
+        .menu ul {
+            display: flex;
+            justify-content: space-around; 
+            width: 100%;      
+        }
+        .menu ul li {
+            font-size: 35px;
+            list-style-type: none; /*забирає кружочки які б з'явилися біля "li"*/     
+        }
+        .menu a {
+            text-decoration: none; /*забирає підчеркування під силкою*/
+            color: #fff; /*міняє колір силки з синього на білий*/
+        }
+        .menu a:hover { /*":hover"  псевдоклас,  використовується шоб робити якісь дії при наведенні на обєкт*/
+            color: #c4948c; /*при наведенні на меню(силки) буде міняти їх колір з білого на оцей - #c4948c*/
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="mobile_menu">
+            <div class="burger">
+                <div class="bg_button">
+                    <a href="#" class="button_menu_mobile">
+                        <img src="img/menu-button-of-three-horizontal-lines.png" alt="burger">
+                    </a>
+                    <p>LoveCoffeeBar</p>
+                </div>            
+                <ul class="menu-list">
+                    <li><a href="#">About us</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">Contact details</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <section class="content">
+        <div id="rectangle" >
+            <div class="header_0">
+                <div class="menu">
+                    <ul>
+                        <li><a href="#">About us</a></li>
+                        <li> | </li>
+                        <li><a href="index.html">Home</a></li>
+                        <li> | </li>
+                        <li><a href="#">Contact details</a></li>
+                    </ul>
+                </div>   
+                <div class="header">
+                    <div id ="rectangle2" >
+                         <div class="container">
+                            <h1 align="center">LoveCoffeeBar
+                            </h1>
+                         </div>
+                    </div>
+                </div>
+            </div>               
+            <div class="intro">
+                <div class="one">
+                    <div class = "line1"></div>
+                    <div class="rectangle_class_3" id ="rectangle3" >             
+                        <p align="center" >
+                            Nice to meet you!
+                        </p>
+                        <p align="center">
+                            Are you IN LOVE with coffee? <br> Then this is a right  <br> page to visit for you! :) <br>
+                            <br>LoveCoffeeBar - is a place, where you can spend time with friends or in a company of cup of coffee
+                            <br>~
+                        </p>                                           
+                    </div>
+                </div>        
+                <div class="rectangle5">
+                    <div class = "line2"></div>
+                    <div class="photo_rectangle5">
+                        <center>
+                            <img src="./img/asd.jpg" height = 290px alt = "Not found"  > 
+                        </center>
+                        <center>
+                            <img src="./img/b.jpg" height = 290px vspace = 10px alt = "Not found"  >
+                        </center>
+                    </div>
+                    
+                </div> 
+                <div id ="rectangle4" >
+                    <div class = "line3"></div>
+                    <div class="under_rectangle4">
+                        <img src="./img/c.jpg" width=425px height = 607px alt = "Not found"  >
+                    </div>                    
+                </div>       
+            </div>    
+        </div>
+    </section>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="js/menu.js"></script>
+</body>
+</html>
